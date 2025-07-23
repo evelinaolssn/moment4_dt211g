@@ -1,0 +1,41 @@
+//Switch to dark theme colors
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: $dark-background-color;
+        color: $dark-text-color;
+    }
+
+    header {
+        background-color: $dark-primary-color;
+    }
+
+    .navigation ul,
+    .navigation a {
+        background-color: $dark-secondary-color;
+        color: $dark-text-color;
+    }
+
+    h2,
+    h3 {
+        color: $dark-primary-color;
+    }
+
+    .grid-layout {
+        background-color: $dark-secondary-color;
+    }
+
+    .button-startpage,
+    .button-sass {
+        background-color: $dark-primary-color;
+        color: $dark-text-color;
+
+        &:hover {
+            background-color: darken($dark-primary-color, 15%);
+        }
+    }
+
+    footer {
+        background-color: $dark-primary-color;
+        color: $dark-text-color;
+    }
+}
