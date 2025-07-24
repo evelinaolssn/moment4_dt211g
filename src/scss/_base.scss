@@ -1,19 +1,22 @@
+@use "variables";
+@use "mixins";
+
 //Entire page body style 
 body {
     margin: 0;
     padding: 0;
-    background-color: $background-color;
-    color: $text-color;
+    background-color: variables.$background-color;
+    color: variables.$text-color;
     line-height: 1.7;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 //Header styling and limited width 
 header {
-    background-color: $primary-color;
+    background-color: variables.$primary-color;
     max-width: 75vw;
     margin: 0 auto;
-    border-radius: $border-radius;
+    border-radius: variables.$border-radius;
 }
 
 //Centers main heading
@@ -26,17 +29,17 @@ h1 {
 h2 {
     text-align: center;
     padding: 1rem;
-    color: darken($secondary-color, 25%);
+    color: darken(variables.$secondary-color, 25%);
 }
 
 h3 {
-    color: lighten($text-color, 20%);
+    color: lighten(variables.$text-color, 20%);
 }
 
 //Navigation menu layout and design 
 .navigation {
     ul {
-        background-color: $secondary-color;
+        background-color: variables.$secondary-color;
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -45,32 +48,30 @@ h3 {
         padding: 1rem;
     }
 
-
-    //Design and hover effect on navigation links
     a {
-        background-color: $secondary-color;
-        color: $text-color;
+        background-color: variables.$secondary-color;
+        color: variables.$text-color;
         text-decoration: none;
         padding: 1rem;
-        border-radius: $border-radius;
+        border-radius: variables.$border-radius;
 
         &:hover {
-            background-color: darken($secondary-color, 25%);
+            background-color: darken(variables.$secondary-color, 25%);
         }
     }
 
     @media (max-width: 1024px) {
-  ul {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
+        ul {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
 
-  &.visible ul {
-    display: flex;
-  }
-}
+        &.visible ul {
+            display: flex;
+        }
+    }
 }
 
 //Hidden hamburger menu while full navigation menu is displayed
@@ -87,12 +88,12 @@ h3 {
 
 //Styling for the button on the start page
 .button-startpage {
-    @include button-style($primary-color, $text-color, true);
+    @include mixins.button-style(variables.$primary-color, variables.$text-color, true);
 }
 
 //Styling for button on the SASS page
 .button-sass {
-    @include button-style($background-color, $text-color, false);
+    @include mixins.button-style(variables.$background-color, variables.$text-color, false);
 }
 
 //Adds space above the button
@@ -106,7 +107,7 @@ footer {
     max-width: 75vw;
     padding: 1rem;
     margin: 3rem auto 0 auto;
-    background-color: $primary-color;
-    color: $text-color;
-    border-radius: $border-radius;
+    background-color: variables.$primary-color;
+    color: variables.$text-color;
+    border-radius: variables.$border-radius;
 }

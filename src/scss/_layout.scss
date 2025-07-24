@@ -1,17 +1,18 @@
+@use "variables";
+
 /*Main layout settings for the entire page*/
 %main-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
-    gap: 3rem; 
+    gap: 3rem;
     align-items: center;
     justify-content: center;
     max-width: 70vw;
     width: 100%;
     padding: 2rem;
 
-    //Layout for smaller screens
-    @media (max-width: 1024px ) {
+    @media (max-width: 1024px) {
         grid-template-columns: 1fr;
         margin: 0 auto;
     }
@@ -20,7 +21,7 @@
         max-width: 100%;
         width: 30rem;
         height: auto;
-        border-radius: $border-radius;
+        border-radius: variables.$border-radius;
         justify-items: center;
     }
 }
@@ -28,6 +29,5 @@
 /*Applies grid-layout settings on all pages*/
 .grid-layout {
     @extend %main-layout;
-    background-color: $secondary-color;
+    background-color: variables.$secondary-color;
 }
-
