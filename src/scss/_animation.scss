@@ -30,8 +30,14 @@
     }
 
     100% {
-        transform: translate(100vw, 0) rotate(0deg);
+        transform: translate(95vw, 0) rotate(0deg);
     }
+}
+
+.bird-section {
+    max-width: 90vw;
+    width: 100%;
+    overflow: hidden;
 }
 
 .bird-animation {
@@ -39,11 +45,12 @@
     animation: flying-bird 8s linear infinite;
 }
 
-.tilted-image {  
+//Image hover effect that rotates from -10 to 0 degrees and scales up
+.tilted-image {
     transform: rotate(-10deg);
-      transition: transform 0.6s ease;
+    transition: transform 0.6s ease;
 
-      &:hover {
+    &:hover {
         transform: rotate(0deg) scale(1.1);
-      }
+    }
 }
