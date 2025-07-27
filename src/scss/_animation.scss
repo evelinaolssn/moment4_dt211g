@@ -38,3 +38,12 @@
     position: absolute;
     animation: flying-bird 8s linear infinite;
 }
+
+.tilted-image {  
+    transform: rotate(-10deg);
+      transition: transform 0.6s ease;
+
+      &:hover {
+        transform: rotate(0deg) scale(1.1);
+      }
+}
